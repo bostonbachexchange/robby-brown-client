@@ -8,10 +8,13 @@ import AutoDismissAlert from './components/shared/AutoDismissAlert/AutoDismissAl
 import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
+import Blog from './components/Blog'
+import Media from './components/Media'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import Calendar from './components/Calendar'
 
 const App = () => {
 
@@ -45,6 +48,9 @@ const App = () => {
 				<Header user={user} />
 				<Routes>
 					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
+					<Route path='/media' element={<Media msgAlert={msgAlert} user={user} />} />
+					<Route path='/calendar' element={<Calendar msgAlert={msgAlert} user={user} />} />
+					<Route path='/blog' element={<Blog msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
