@@ -17,7 +17,6 @@ import ChangePassword from './components/auth/ChangePassword'
 import Calendar from './components/Calendar'
 import CreateBlog from './components/blog/CreateBlog'
 import ShowBlog from './components/blog/ShowBlog'
-// import CreateEvent from './components/event/CreateEvent'
 import CreateEvent from './components/shared/event/CreateEvent'
 
 
