@@ -1,5 +1,5 @@
 // import React, { Component, Fragment } from 'react'
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment, Component } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
 
@@ -15,12 +15,18 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import Calendar from './components/Calendar'
+import CreateBlog from './components/blog/CreateBlog'
+import ShowBlog from './components/blog/ShowBlog'
+// import CreateEvent from './components/event/CreateEvent'
+import CreateEvent from './components/shared/event/CreateEvent'
+
 
 const App = () => {
 
   const [user, setUser] = useState(null)
   const [msgAlerts, setMsgAlerts] = useState([])
-
+  const [updatedBlogs, setUpdatedBlogs] = useState(true)
+  const [updatedEvents, setUpdatedEvents] = useState(true)
   console.log('user in app', user)
   console.log('message alerts', msgAlerts)
   const clearUser = () => {
@@ -49,31 +55,51 @@ const App = () => {
 				<Routes>
 					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route path='/media' element={<Media msgAlert={msgAlert} user={user} />} />
-					<Route path='/calendar' element={<Calendar msgAlert={msgAlert} user={user} />} />
-					<Route path='/blog' element={<Blog msgAlert={msgAlert} user={user} />} />
+					<Route path='/calendar' element={<Calendar msgAlert={msgAlert} user={user} updatedEvents={updatedEvents}/>} />
+					<Route path='/blog' element={<Blog msgAlert={msgAlert} user={user} updatedBlogs={updatedBlogs}/>} />
+					<Route
+						path='/login'
+						element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
+					/>
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
 					/>
 					<Route
-						path='/sign-in'
-						element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
+						path='/sign-out'
+						element={
+						<RequireAuth user={user}>
+							<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
+						</RequireAuth>
+						}
 					/>
-          <Route
-            path='/sign-out'
-            element={
-              <RequireAuth user={user}>
-                <SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path='/change-password'
-            element={
-              <RequireAuth user={user}>
-                <ChangePassword msgAlert={msgAlert} user={user} />
-              </RequireAuth>}
-          />
+					<Route
+						path='/change-password'
+						element={
+						<RequireAuth user={user}>
+							<ChangePassword msgAlert={msgAlert} user={user} />
+						</RequireAuth>}
+					/>
+					<Route
+						path='/blog/:id'
+						element={
+							<ShowBlog msgAlert={msgAlert} user={user} />
+					}
+					/>
+					<Route
+						path='/update-blog'
+						element={
+						<RequireAuth user={user}>
+							<CreateBlog msgAlert={msgAlert} user={user} setUpdatedBlogs={setUpdatedBlogs}/>
+						</RequireAuth>}
+					/>
+					<Route
+						path='/update-calendar'
+						element={
+						<RequireAuth user={user}>
+							<CreateEvent msgAlert={msgAlert} user={user} setUpdatedEvents={setUpdatedEvents}/>
+						</RequireAuth>} 
+					/> 
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert

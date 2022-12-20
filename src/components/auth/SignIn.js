@@ -57,10 +57,10 @@ const SignIn = (props) => {
     return (
         <div className='row'>
             <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-                <h3>Sign In</h3>
+                <h3 className='text-center'>Login</h3>
                 <Form onSubmit={onSignIn}>
-                    <Form.Group controlId='email'>
-                        <Form.Label>Email address</Form.Label>
+                    <Form.Group controlId='email' className='m-2'>
+                        <Form.Label><strong>Email Address</strong></Form.Label>
                         <Form.Control
                             required
                             type='email'
@@ -70,8 +70,8 @@ const SignIn = (props) => {
                             onChange={e => setEmail(e.target.value)}
                         />
                     </Form.Group>
-                    <Form.Group controlId='password'>
-                        <Form.Label>Password</Form.Label>
+                    <Form.Group controlId='password' className='m-2'>
+                        <Form.Label><strong>Password</strong></Form.Label>
                         <Form.Control
                             required
                             name='password'
@@ -81,7 +81,7 @@ const SignIn = (props) => {
                             onChange={e => setPassword(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit'>
+                    <Button variant='info' type='submit' className='m-2'>
                         Submit
                     </Button>
                 </Form>

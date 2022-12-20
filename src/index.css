@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital@0;1&family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital@0;1&family=Nunito:wght@200&family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital@0;1&family=Nunito:wght@200&family=Rajdhani&family=Roboto:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-family: 'Rajdhani';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +17,41 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  font-family: 'Lora';
+}
+
+.bioPage {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .bioPage {
+    display: block;
+  }
+}
+.mediaPage {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .mediaPage {
+    display: block;
+    width: 100%;
+  }
+}
+.mediaReverse {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .mediaReverse {
+    flex-direction: column-reverse;
+  
+  }
+}
+
+.conRdg:hover {
+  color: blue;
+  font-weight: bold;
 }
