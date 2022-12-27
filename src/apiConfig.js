@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: 'https://brilliant-kataifi-18ffb6.netlify.app',
+	production: 'https://magnificent-tartufo-c4359b.netlify.app',
 	development: 'http://localhost:8000',
 }
 
