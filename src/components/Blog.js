@@ -12,7 +12,6 @@ const Blog = (props) => {
 	const [blogs, setBlogs] = useState(null)
 	const [error, setError] = useState(false)
 	const { msgAlert } = props
-	// console.log('process.env.CLIENT_ORIGIN', process.env.CLIENT_ORIGIN)
 
 	useEffect(() => {
 		getAllBlogs()
