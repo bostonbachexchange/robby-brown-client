@@ -12,6 +12,8 @@ const Blog = (props) => {
 	const [blogs, setBlogs] = useState(null)
 	const [error, setError] = useState(false)
 	const { msgAlert } = props
+	console.log('process.env.CLIENT_ORIGIN', process.env.CLIENT_ORIGIN)
+
 	useEffect(() => {
 		getAllBlogs()
 			.then(res => setBlogs(res.data.blogs))
@@ -33,9 +35,7 @@ const Blog = (props) => {
 	} else if (blogs.length === 0) {
 		return <p className='text-center'>No blogs yet. Check again soon.</p>
 	}
-	const hoverStyle = {
 
-	}
 
 	const blogItems = blogs.map(blog => 
 		<>
