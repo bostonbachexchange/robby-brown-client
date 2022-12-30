@@ -56,16 +56,16 @@ const authenticatedOptions = (
 
 const alwaysOptions = (
 	<>
-
+		<Fragment className=''>
 				<>
-					<Nav.Item className='m-2'>
+					<Nav.Item className='m-auto'>
 						<Link to='/' style={linkStyle}>
 							Home
 						</Link>
 					</Nav.Item>
 				</>
 				<>
-					<Nav.Item className='m-2'>
+					<Nav.Item className='m-auto'>
 						<Link to='/media' style={linkStyle}>
 							Media
 						</Link>
@@ -79,26 +79,28 @@ const alwaysOptions = (
 					</Navbar.Brand>
 				</>
 				<>
-					<Nav.Item className='m-2'>
+					<Nav.Item className='m-auto'>
 						<Link to='/blog' style={linkStyle}>
 							Blog
 						</Link>
 					</Nav.Item>
 				</>
 				<>
-					<Nav.Item className='m-2'>
+					<Nav.Item className='m-auto'>
 						<Link to='/calendar' style={linkStyle}>
 							Calendar
 						</Link>
 					</Nav.Item>
 				</>
+		</Fragment>
+		
 	</>
 )
 
 const Header = ({ user }) => (
 	<>
-			<Navbar bg='light' variant='dark' expand='md' className='border-bottom border-3'>
-				<Navbar.Toggle aria-controls='basic-navbar-nav' />
+			<Navbar bg='light' variant='light' expand='md' className='border-bottom border-3 m-2'>
+				<Navbar.Toggle aria-controls='basic-navbar-nav' className=''/>
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='m-auto'>
 						{/* {user && (
