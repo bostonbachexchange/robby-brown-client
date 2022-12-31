@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Rajdhani&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital@0;1&family=Rajdhani&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital@0;1&family=Nunito:wght@200&family=Rajdhani&display=swap');
@@ -26,6 +26,15 @@ code {
 .bioPage {
   display: flex;
 }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+} 
+
 @media only screen and (max-width: 600px) {
   .bioPage {
     display: block;
@@ -33,23 +42,48 @@ code {
 }
 .mediaPage {
   display: flex;
+  margin: 4em;
 }
-@media only screen and (max-width: 600px) {
-  .mediaPage {
-    display: block;
-    width: 100%;
-  }
+
+.discriptionWeb {
+  text-align: center;
+  margin: 7px;
+  padding: 7px;
+  line-height: 2.5em;
+  flex: 6;
 }
-.mediaReverse {
-  display: flex;
+
+.videoWebStyle {
+  width: 100%; 
+  height: 400px; 
+  box-shadow: 5px 5px 5px #9E9E9E;
 }
 
 @media only screen and (max-width: 600px) {
+  .mediaPage {
+    /* display: block; */
+    flex-direction: column;
+    margin: 0px;
+    padding: 6px;
+    width: 100%;
+  }
+  .discriptionWeb {
+    margin-top: 15px;
+    
+  }
+  .videoWebStyle {
+    height: 275px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   .mediaReverse {
     flex-direction: column-reverse;
-  
   }
+
+
 }
+  
+
 
 .conRdg:hover {
   color: blue;

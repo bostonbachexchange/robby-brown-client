@@ -2,15 +2,19 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
+import FontAwesomeIcons from './FontAwesomeIcons'
 
 const linkStyle = {
-    color: 'black',
-    textDecoration: 'none',
+	color: 'black',
+	textDecoration: 'none',
 	fontSize: '24px',
 	justifyContent: 'space-between',
 	marginLeft: '12px',
 	marginRight: '12px',
-}
+  }
+  
+  
+
 const brandStyle = {
     color: 'black',
 	padding: '0px',
@@ -56,7 +60,7 @@ const authenticatedOptions = (
 
 const alwaysOptions = (
 	<>
-		<Fragment className=''>
+		<Fragment>
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/' style={linkStyle}>
@@ -91,6 +95,7 @@ const alwaysOptions = (
 							Calendar
 						</Link>
 					</Nav.Item>
+				<FontAwesomeIcons></FontAwesomeIcons>
 				</>
 		</Fragment>
 		
@@ -99,8 +104,8 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
 	<>
-			<Navbar bg='light' variant='light' expand='md' className='border-bottom border-3 m-2'>
-				<Navbar.Toggle aria-controls='basic-navbar-nav' className=''/>
+			<Navbar variant='light' expand='md' className='border-bottom border-3 m-2 linkptile'>
+				<Navbar.Toggle aria-controls='basic-navbar-nav'/>
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='m-auto'>
 						{/* {user && (
