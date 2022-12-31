@@ -36,7 +36,7 @@ const Calendar = (props) => {
 	if (!events) {
 		return <LoadingScreen />
 	} else if (events.length === 0) {
-		return <p className='text-center'>No Events yet. Better add some.</p>
+		return <p className='text-center m-4'>No Events yet. Check back soon.</p>
 	}
 
 	const eventItems = events.map(event => 

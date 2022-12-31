@@ -32,7 +32,7 @@ const Blog = (props) => {
 	if (!blogs) {
 		return <LoadingScreen />
 	} else if (blogs.length === 0) {
-		return <p className='text-center'>No blogs yet. Check again soon.</p>
+		return <p className='text-center m-4'>No blogs yet. Check again soon.</p>
 	}
 
 
