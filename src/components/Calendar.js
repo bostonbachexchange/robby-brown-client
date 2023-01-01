@@ -39,11 +39,34 @@ const Calendar = (props) => {
 		return <p className='text-center m-4'>No Events yet. Check back soon.</p>
 	}
 
-	const eventItems = events.map(event => 
+	const currentDate = new Date();
+	
+	const upcomingEvents = events.filter(event => Date.parse(event.date) > currentDate.getTime());
+
+	const pastEvents = events.filter(event => Date.parse(event.date) < currentDate.getTime());
+
+	const upcomingEventItems = upcomingEvents.map(event => 
 		<>
 			<Container className='mt-3 p-0 rounded' style={{width: '100%', boxShadow: '3px 3px 3px grey', border: '3px solid wheat'}}>
 				<Row className='m-auto p-3 rounded-top' style={{border: '2px solid black', backgroundColor: '#212121', color: 'wheat'}}>
-					<Col md={3} className="text-start" style={{fontSize: '1.5em'}}>{dateFormat(event.createdAt, "mm-d-yy")}</Col>
+					<Col md={3} className="text-start" style={{fontSize: '1.5em'}}>{dateFormat(event.date, "mm-d-yy")}</Col>
+					<Col md={6} className="text-center" style={{fontSize: '1.4em', fontWeight: 'bold'}}>{event.location}</Col>
+					<Col sm={3} className="text-end">{event.time}</Col>
+				</Row>
+				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black'}}>
+					<Col></Col>
+					<Col md={6} className="m-4 fs-4" style={{color: 'black', size: '0.7'}}>{event.details}</Col>
+					<Col></Col>
+				</Row>
+			</Container>
+		</>
+		)
+
+	const eventItems = pastEvents.map(event => 
+		<>
+			<Container className='mt-3 p-0 rounded' style={{width: '100%', boxShadow: '3px 3px 3px grey', border: '3px solid wheat'}}>
+				<Row className='m-auto p-3 rounded-top' style={{border: '2px solid black', backgroundColor: '#212121', color: 'wheat'}}>
+					<Col md={3} className="text-start" style={{fontSize: '1.5em'}}>{dateFormat(event.date, "mm-d-yy")}</Col>
 					<Col md={6} className="text-center" style={{fontSize: '1.4em', fontWeight: 'bold'}}>{event.location}</Col>
 					<Col sm={3} className="text-end">{event.time}</Col>
 				</Row>
@@ -64,9 +87,11 @@ const Calendar = (props) => {
 		{/* </div> */}
 		</>
 		)
+
+
 	return (
 		<>
-			<div className='mt-0 pb-4' style={{backgroundColor: '#EDEFEE'}}>
+			<div className='mt-0 pb-4' style={{backgroundColor: 'white'}}>
 			<div className='pt-3 pb-1'>
 				<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', backgroundColor: 'white'}}>Calandar</h2>
 			</div>
@@ -97,6 +122,9 @@ const Calendar = (props) => {
 				</Row>
 			</Container> */}
 			{/* <hr className='m-auto mt-3' style={{width: '80%', color: 'green'}}></hr> */}
+			<h3 className='m-2 mt-4'>Upcoming Events</h3>
+			{upcomingEventItems}
+			<h3 className='m-2 mt-4'>Past Events</h3>
 			{eventItems}
 			</div>
 		</>
