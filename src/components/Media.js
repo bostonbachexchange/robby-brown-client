@@ -10,7 +10,7 @@ const Media = () => {
 
 				<div className='mediaPage' >
 					<div className='mt-auto mb-auto' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/EwGbCQMd-S4"></iframe>
+						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/EwGbCQMd-S4" allowFullScreen></iframe>
 					</div>
 					<div className='discriptionWeb'>
 						<h3>Mahler - “Rheinlegendchen” | NEC Liederabend Series</h3>
@@ -27,12 +27,12 @@ const Media = () => {
 						</p>
 					</div>
 					<div className='text-center' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/JRrzXDe-6ZY"></iframe>
+						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/JRrzXDe-6ZY" allowFullScreen></iframe>
 					</div>
 				</div>
 				<div className='mediaPage' >
 					<div className='text-center mt-auto mb-auto' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/E6zfq5DOCUM"></iframe>
+						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/E6zfq5DOCUM" allowFullScreen></iframe>
 					</div>
 					<div className='discriptionWeb' >
 						<h3 >VAP Degree Recital <br></br> <a href="https://www.paulinetanmezzo.com/">Pauline Tan</a></h3>
@@ -47,7 +47,7 @@ const Media = () => {
 						</p>
 					</div>
 					<div className='text-center' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/xARcVe-sqPc"></iframe>
+						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/xARcVe-sqPc" allowFullScreen></iframe>
 					</div>
 				</div>
 			</div>
