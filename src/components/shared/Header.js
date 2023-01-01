@@ -2,7 +2,15 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
-import FontAwesomeIcons from './FontAwesomeIcons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { faYoutube} from '@fortawesome/free-brands-svg-icons'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+library.add(faEnvelope, faYoutube)
+
+console.log('faEnvelope', faEnvelope)
 
 const linkStyle = {
 	color: 'black',
@@ -95,7 +103,6 @@ const alwaysOptions = (
 							Calendar
 						</Link>
 					</Nav.Item>
-				<FontAwesomeIcons></FontAwesomeIcons>
 				</>
 		</Fragment>
 		
@@ -115,6 +122,13 @@ const Header = ({ user }) => (
 						{/* {user ? authenticatedOptions : unauthenticatedOptions} */}
 					</Nav>
 				</Navbar.Collapse>
+				{/* <a href="/" target="_blank">
+					<FontAwesomeIcon icon={faYoutube} className='m-1 border border-4 shadow rounded' size="lg" color="darkred" />
+				</a> */}
+				<a href="mailto:eid2107@columbia.edu" target="_blank">
+					<FontAwesomeIcon icon={faEnvelope} className='m-1 border border-4 shadow rounded' size="lg" color="darkblue" />
+				</a>
+
 			</Navbar>
 			{user && 
 			<Navbar bg='light' variant='dark' expand='md' className='border-bottom border-3'>
