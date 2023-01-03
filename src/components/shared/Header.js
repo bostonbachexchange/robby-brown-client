@@ -34,7 +34,7 @@ const authenticatedOptions = (
 	<>
 		<Nav.Item className='m-2'>
 			<Link to='update-blog' style={linkStyle}>
-				Update Blog
+				<span className='hoverClass1'>Update Blog</span>
 			</Link>
 		</Nav.Item>
 		<Nav.Item className='m-2'>
@@ -72,14 +72,14 @@ const alwaysOptions = (
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/' style={linkStyle}>
-							Home
+						<span className='HoverClass1'>Home</span>
 						</Link>
 					</Nav.Item>
 				</>
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/media' style={linkStyle}>
-							Media
+						<span className='HoverClass1'>Media</span>
 						</Link>
 					</Nav.Item>
 				</>
@@ -93,14 +93,14 @@ const alwaysOptions = (
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/blog' style={linkStyle}>
-							Blog
+						<span className='HoverClass1'>Blog</span>
 						</Link>
 					</Nav.Item>
 				</>
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/calendar' style={linkStyle}>
-							Calendar
+						<span className='HoverClass1'>Calandar</span>
 						</Link>
 					</Nav.Item>
 				</>

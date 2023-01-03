@@ -83,9 +83,15 @@ code {
 
 }
   
-
+.HoverClass1:hover {
+  color: rgb(138, 114, 55) !important;
+}
 
 .conRdg:hover {
-  color: blue;
+  color: #EAEAEA;
   font-weight: bold;
+}
+
+.conRdgBorder:hover {
+  border: 3px solid #9E9E9E !important;
 }
