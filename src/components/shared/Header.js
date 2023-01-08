@@ -28,7 +28,8 @@ const brandStyle = {
 	padding: '0px',
     textDecoration: 'none',
 	justifyContent: 'center',
-	fontSize: '28px'
+	fontSize: '28px',
+	fontWeight: '700'
 }
 const authenticatedOptions = (
 	<>
@@ -86,8 +87,8 @@ const alwaysOptions = (
 				<>
 					<Navbar.Brand className='m-auto'>
 						<Link to='/' style={brandStyle}>
-							<strong>Elias Dagher</strong>
-						</Link>
+							Eli</Link><a href='https://jacobclapper.dev' style={brandStyle}>a</a><Link to='/' style={brandStyle}>s Dagh
+						</Link><a href='https://jacobclapper.dev' style={brandStyle}>er</a>
 					</Navbar.Brand>
 				</>
 				<>
