@@ -100,7 +100,7 @@ const alwaysOptions = (
 				<>
 					<Nav.Item className='m-auto'>
 						<Link to='/calendar' style={linkStyle}>
-						<span className='HoverClass1'>Calandar</span>
+						<span className='HoverClass1'>Calendar</span>
 						</Link>
 					</Nav.Item>
 				</>
