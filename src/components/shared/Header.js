@@ -87,8 +87,9 @@ const alwaysOptions = (
 				<>
 					<Navbar.Brand className='m-auto'>
 						<Link to='/' style={brandStyle}>
-							Eli</Link><a href='https://jacobclapper.dev' style={brandStyle}>a</a><Link to='/' style={brandStyle}>s Dagh
-						</Link><a href='https://jacobclapper.dev' style={brandStyle}>er</a>
+							Elias Dagher</Link>
+							{/* <a href='https://jacobclapper.dev' style={brandStyle}>a</a><Link to='/' style={brandStyle}>s Dagh
+						</Link><a href='https://jacobclapper.dev' style={brandStyle}>er</a> */}
 					</Navbar.Brand>
 				</>
 				<>
