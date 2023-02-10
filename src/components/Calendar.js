@@ -95,7 +95,7 @@ const Calendar = (props) => {
 			<div className='pt-3 pb-1'>
 				<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', backgroundColor: 'white'}}>Calandar</h2>
 			</div>
-			<h2 className="m-2 text-center pb-4">2022</h2>
+			<h2 className="m-2 text-center pb-4">2023</h2>
 			{/* <div className="m-auto mt-5" style={{display: 'flex', width: '80%'}}>
 				<div style={{flex: '4'}}>
 					<h3 className='text-left'> Date</h3>
