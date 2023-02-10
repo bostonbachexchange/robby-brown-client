@@ -1,18 +1,9 @@
 import eliaspic from '../assets/images/elias-pic.jpeg'
 
-const Home = (props) => {
-	// const { msgAlert, user } = props
-	console.log('props in home', props)
-const pageStyle = {
-	display: 'flex',
-}
-
-
+const Home = () => {
 	return (
 		<>
 			<div className='p-3'>
-			<i class="fa fa-google" aria-hidden="true" position='absolute'></i>
-
 				<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black'}}>Biography</h2>
 			</div>
 			<div class='bioPage'>
@@ -27,10 +18,9 @@ const pageStyle = {
 					<br></br>
 					Elias also plays the mbira dzavadzimu, a plucked instrument of metal keys wound over a wooden soundboard. The instrument comes from the Shona people of Zimbabwe, and can be played both as a solo instrument and in ensembles of various sizes. He often plays, and occasionally performs, alongside a Boston-based group of practitioners of this traditional Zimbabwean music. 
 					</p>
-
 				</div>
 			</div>
-			<div className='w-100 p-2' style={{border: '1px solid black', }}>
+			<div className='w-100 p-2' style={{border: '1px solid black'}}>
 				<address className="m-2"><strong>Reach me: </strong> 
 				<a href="mailto:eid2107@columbia.edu">eid2107@columbia.edu</a>
 				</address>

@@ -10,7 +10,9 @@ const CreateEvent = (props) => {
     const { user, msgAlert } = props
     const navigate = useNavigate()
     const [event, setEvent] = useState({
+        title: '',
         details: '',
+        learnmore: '',
         location: '',
         date: '',
         time:'',
@@ -34,8 +36,7 @@ const CreateEvent = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         createEvent(user, event)
-        // setUpdatedBlogs()
-            // .then(res => { navigate(`/event/${res.data.event._id}`)})
+            .then(res => { navigate(`/calendar`)})
             .then(res => console.log('this is the event inside createEvent', event))
             .then(() => {
                 msgAlert({
