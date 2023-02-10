@@ -79,6 +79,7 @@ const Calendar = (props) => {
 				</Row>
 				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black'}}>
 					<p>{event.details}</p>
+					<p>{event.location}</p>
 					<a href={event.learnmore}>
 						<Button >Learn More</Button>
 					</a>
