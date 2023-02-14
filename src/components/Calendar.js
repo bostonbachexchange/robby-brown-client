@@ -38,6 +38,11 @@ const Calendar = (props) => {
 	} else if (events.length === 0) {
 		return <p className='text-center m-4'>No Events yet. Check back soon.</p>
 	}
+	// const noEvents =()=> {
+	// 	return (
+	// 		<p>There are currently no upcoming events. Check back soon</p>
+	// 	)
+	// }
 
 	const currentDate = new Date();
 	
@@ -78,9 +83,9 @@ const Calendar = (props) => {
 					</Col>
 				</Row>
 				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black'}}>
-					<p>{event.details}</p>
+					<p className='p-1'>{event.details}</p>
 					<p>{event.location}</p>
-					<a href={event.learnmore}>
+					<a href={event.learnmore} target='_blank'>
 						<Button >Learn More</Button>
 					</a>
 				</Row>
@@ -135,11 +140,11 @@ const Calendar = (props) => {
 			<div className='mt-0 pb-4' style={{backgroundColor: 'white'}}>
 				<div className='pt-3 pb-1'>
 					<h2 
-						className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', backgroundColor: 'white'}}>Calandar</h2>
+						className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', backgroundColor: 'white'}}>Calendar</h2>
 				</div>
 				<h2 className="m-2 text-center pt-4 pb-4">2023</h2>
 			<h3 className='m-2 mt-4'>Upcoming Events</h3>
-			{upcomingEventItems}
+			{upcomingEventItems ? upcomingEventItems : <p>There are currently no upcoming events. Check back soon</p>}
 			<h3 className='m-2 mt-4'>Past Events</h3>
 			{eventItems}
 			</div>
