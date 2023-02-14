@@ -144,7 +144,7 @@ const Calendar = (props) => {
 				</div>
 				<h2 className="m-2 text-center pt-4 pb-4">2023</h2>
 			<h3 className='m-2 mt-4'>Upcoming Events</h3>
-			{(upcomingEventItems.length > 0 ) ? upcomingEventItems : <p className='m-4'>There are currently no upcoming events. Check back soon</p>}
+			{(upcomingEventItems.length > 0 ) ? upcomingEventItems : <p className='m-4'>There are currently no upcoming events. Check back soon!</p>}
 			<h3 className='m-2 mt-4'>Past Events</h3>
 			{eventItems}
 			</div>
