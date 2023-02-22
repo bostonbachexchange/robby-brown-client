@@ -1,10 +1,9 @@
 import eliaspic from '../assets/images/elias-pic.jpeg'
-
 const Home = () => {
 	return (
-		<>
+		<div style={{backgroundColor: '#EEE'}}>
 			<div className='p-3'>
-				<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black'}}>Biography</h2>
+				<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', borderRadius: '4px', backgroundColor: '#FFF'}}>Biography</h2>
 			</div>
 			<div class='bioPage'>
 				<div style={{flex: '6'}}>
@@ -20,12 +19,12 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<div className='w-100 p-2' style={{border: '1px solid black'}}>
+			<div className='footer w-100 p-2' style={{border: '1px solid black', backgroundColor: '#fff'}}>
 				<address className="m-2"><strong>Reach me: </strong> 
 				<a href="mailto:eid2107@columbia.edu">eid2107@columbia.edu</a>
 				</address>
 			</div>
-		</>
+		</div>
 	)
 }
 

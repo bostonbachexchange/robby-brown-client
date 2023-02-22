@@ -13,7 +13,13 @@ const CreateBlog = (props) => {
         date: '',
         video:'',
     })
-    console.log('this is blog in createBlog', blog)
+
+    const [image, setImage] = useState(null)
+
+    const handleImageChange = (e) => {
+      setImage(e.target.files[0])
+    }
+    
     const handleChange = (e) => {
         setBlog(prevBlog => {
             const updatedValue = e.target.value 

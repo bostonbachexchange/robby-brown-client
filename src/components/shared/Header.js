@@ -10,8 +10,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(faEnvelope, faYoutube)
 
-console.log('faEnvelope', faEnvelope)
-
 const linkStyle = {
 	color: 'black',
 	textDecoration: 'none',
@@ -88,8 +86,6 @@ const alwaysOptions = (
 					<Navbar.Brand className='m-auto'>
 						<Link to='/' style={brandStyle}>
 							Elias Dagher</Link>
-							{/* <a href='https://jacobclapper.dev' style={brandStyle}>a</a><Link to='/' style={brandStyle}>s Dagh
-						</Link><a href='https://jacobclapper.dev' style={brandStyle}>er</a> */}
 					</Navbar.Brand>
 				</>
 				<>
@@ -113,7 +109,7 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
 	<>
-			<Navbar variant='light' expand='md' className='border-bottom border-3 m-2 linkptile'>
+			<Navbar variant='light' expand='md' className='border-bottom border-3 m-2 mb-0 linkptile'>
 				<Navbar.Toggle aria-controls='basic-navbar-nav'/>
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='m-auto'>
@@ -130,7 +126,6 @@ const Header = ({ user }) => (
 				<a href="mailto:eid2107@columbia.edu" target="_blank">
 					<FontAwesomeIcon icon={faEnvelope} className='m-1 border border-4 shadow rounded' size="lg" color="darkblue" />
 				</a>
-
 			</Navbar>
 			{user && 
 			<Navbar bg='light' variant='dark' expand='md' className='border-bottom border-3'>
