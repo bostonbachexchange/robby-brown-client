@@ -101,7 +101,9 @@ code {
   box-shadow: 15px 15px 15px black;
   font-family: lora;
   }
-
+.stuff {
+  font-size: 24px;
+}
 @media only screen and (max-width: 600px) {
   .mediaPage {
     /* display: block; */
@@ -172,7 +174,13 @@ code {
     font-family: lora;
     }
 }
-  
+
+@media screen and (min-width: 3072px) {
+  .stuff {
+    font-size: 42px;
+  }
+}
+ 
 .HoverClass1:hover {
   color: rgb(138, 114, 55) !important;
 }
