@@ -69,7 +69,7 @@ const Blog = (props) => {
 
 	return (
 		<>
-			<div style={{backgroundColor: '#EEE'}} className="mb-0 pb-5">
+			<div style={{backgroundColor: '#EEE', minHeight: '100vh'}} className="mb-0 pb-5">
 				<div className='p-3'>
 					<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', borderRadius: '4px', backgroundColor: '#FFF'}}>Blog</h2>
 				</div>
