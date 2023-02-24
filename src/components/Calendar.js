@@ -44,6 +44,22 @@ const Calendar = (props) => {
 	// 	)
 	// }
 
+	// retrieve the date from the database using Mongoose
+// const event = await Event.findById(eventId);
+
+const eventDate = new Date('2023-04-17T00:00:00.000Z');
+
+// create a new date object in Eastern Standard Time (EST)
+const estDate = new Date(eventDate.toLocaleDateString('en-US', { timeZone: 'America/New_York' }) + ' ' + eventDate.toLocaleTimeString('en-US', { timeZone: 'America/New_York' }));
+
+// format the EST date using the toLocaleDateString method
+const formattedDate = estDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+
+// display the formatted date
+console.log("formattedDate", formattedDate); // will output '04/16/2023' if the EST date is actually April 16th
+
+
+
 	const currentDate = new Date();
 	
 	const upcomingEvents = events.filter(event => Date.parse(event.date) > currentDate.getTime());
@@ -126,7 +142,8 @@ const Calendar = (props) => {
 					</Col>
 				</Row>
 				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black', backgroundColor: 'whitesmoke', fontFamily: 'Roboto', fontSize: '18px'}}>
-					<p>{event.details}</p>
+					<p className='p-1'>{event.details}</p>
+					<p>{event.location}</p>
 					<a href={event.learnmore}>
 						<Button >Learn More</Button>
 					</a>

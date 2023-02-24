@@ -86,6 +86,15 @@ const ShowBlog = (props) => {
                 :
                 (null)
             }
+            {blog.link?
+                    <div className='text-center mt-4 mb-4 p-1' >
+                        <a className='' 
+                                href={`${blog.link}`} 
+                                >{`${blog.link}`}</a>
+                    </div>
+                :
+                (null)
+            }
                 {user?
                     <>
                         {/* <Button onClick={() => setEditModalShow(true)} className="m-2" variant="warning">
