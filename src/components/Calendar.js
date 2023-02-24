@@ -47,7 +47,7 @@ const Calendar = (props) => {
 	// retrieve the date from the database using Mongoose
 // const event = await Event.findById(eventId);
 
-const eventDate = new Date('2023-04-17T00:00:00.000Z');
+const eventDate = new Date('2023-04-17T00:00:00.000Z'.replace(/-/g, '\/').replace(/T.+/, ''));
 
 // create a new date object in Eastern Standard Time (EST)
 const estDate = new Date(eventDate.toLocaleDateString('en-US', { timeZone: 'America/New_York' }) + ' ' + eventDate.toLocaleTimeString('en-US', { timeZone: 'America/New_York' }));
@@ -83,7 +83,7 @@ console.log("formattedDate", formattedDate); // will output '04/16/2023' if the 
 						md={3} 
 						className="text-start" 
 						style={{fontSize: '1.5em'}}>
-							{dateFormat(event.date, "mm-d-yy")}
+							{dateFormat(event.date.replace(/-/g, '\/').replace(/T.+/, ''), "mm-d-yy")}
 					</Col>
 					<Col 
 						md={6} 
@@ -126,7 +126,7 @@ console.log("formattedDate", formattedDate); // will output '04/16/2023' if the 
 						md={3} 
 						className="text-start" 
 						style={{fontSize: '1.5em'}}>
-							{dateFormat(event.date, "mm-d-yy")}
+							{dateFormat(event.date.replace(/-/g, '\/').replace(/T.+/, ''), "mm-d-yy")}
 					</Col>
 					<Col 
 						md={6} 
