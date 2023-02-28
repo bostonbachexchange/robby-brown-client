@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import { Dropzone } from 'react-dropzone';
 
 const BlogForm = (props) => {
-    const { blog, handleChange, handleSubmit, onChangeFile } = props
+    const { blog, fileName, handleChange, handleSubmit, onChangeFile } = props
 
     return <>
             <Form className='m-5 playFont bg-light p-2 border border-2 rounded fs-2 text-center' onSubmit={handleSubmit} encType="multipart/form-data" name="blog">
@@ -45,18 +45,19 @@ const BlogForm = (props) => {
                     <Form.Control className="w-50 m-auto" placeholder="link from website" value={blog.link} name="link" id="link" onChange={ handleChange }/>
                 </Form.Group>
 
-                {/* <Form.Group className="mb-3">
+                <Form.Group className="mb-3">
                     <Form.Label htmlFor="blogImage">Image</Form.Label>
                     <Form.Control 
                         type='file'
                         // multiple 
-                        // accept='image/*' 
+                        // accept='image/*'
+                        encType="form-data" 
                         className="w-50 m-auto" 
-                        // value={blog.blogImage} 
+                        value={fileName} 
                         name="fileName" 
-                        id="blogImage" 
+                        id="fileName" 
                         onChange={ onChangeFile }/>
-                </Form.Group> */}
+                </Form.Group>
 
                 <Button variant="primary" type="submit">
                 Submit

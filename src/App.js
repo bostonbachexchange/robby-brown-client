@@ -26,8 +26,7 @@ const App = () => {
   const [msgAlerts, setMsgAlerts] = useState([])
   const [updatedBlogs, setUpdatedBlogs] = useState(true)
   const [updatedEvents, setUpdatedEvents] = useState(true)
-  console.log('user in app', user)
-  console.log('message alerts', msgAlerts)
+  
   const clearUser = () => {
     console.log('clear user ran')
     setUser(null)

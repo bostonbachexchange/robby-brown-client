@@ -9,17 +9,24 @@ export const getOneBlog = (id) => {
     return axios(`${apiUrl}/blog/${id}`)
 }
 
-export const createBlog = (user, blog) => {
+export const createBlog = (user, blog, fileName) => {
     console.log('this is user', user)
     console.log('this is blog', blog)
+    console.log('this is fileName', fileName)
+    const formData = new FormData();
+    // formData.append(blog);
+    formData.append('blog', JSON.stringify(blog));
+    formData.append('file', fileName);
+
 	return axios({
 		method: 'POST',
         // checkurl
 		url: apiUrl + '/blogs',
 		headers: {
 			Authorization: `Token token=${user.token}`,
+            'Content-Type': 'multipart/form-data;boundary="boundary"',
 		},
-		data: { blog: blog},
+		data:  formData ,
 	})
 }
 

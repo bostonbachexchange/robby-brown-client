@@ -11,12 +11,12 @@ const ShowBlog = (props) => {
     const [updated, setUpdated] = useState(false)
     const { id } = useParams()
     const { msgAlert , user} = props
+    console.log('bloggy', blog)
     const navigate = useNavigate()
     useEffect(() => {
         getOneBlog(id)
             .then(res => {
                 setBlog(res.data.blog)
-                console.log('blog', blog)
             })
             .catch(err => {
                 msgAlert({
@@ -64,6 +64,17 @@ const ShowBlog = (props) => {
         </div>
 
         <div className="text-center m-4">
+            {blog.blogImage?
+                    <div className='text-center mt-4 mb-4 p-1' >
+                        {console.log('blog.blogImage', blog.blogImage)}
+                        <img className='border-radius border-radius-5' 
+                                style={{width: '45%'}}
+                                src={`http://localhost:8000/${blog.blogImage}`} 
+                                />
+                    </div>
+                :
+                (null)
+            }
         <p className="m-4 fs-5 p-3" style={{fontFamily: 'Nunito'}}>
             {blog.text ?(
                 <div> {
