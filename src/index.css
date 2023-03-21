@@ -101,8 +101,10 @@ code {
   box-shadow: 15px 15px 15px black;
   font-family: lora;
   }
+
 .stuff {
-  font-size: 24px;
+  font-size: 22px;
+  padding: 8px;
 }
 @media only screen and (max-width: 600px) {
   .mediaPage {
@@ -111,6 +113,10 @@ code {
     margin: 0px;
     padding: 6px;
     width: 100%;
+  }
+  .stuff {
+    font-size: 18px;
+    padding: 10px;
   }
   .discriptionWeb {
     margin-top: 15px;

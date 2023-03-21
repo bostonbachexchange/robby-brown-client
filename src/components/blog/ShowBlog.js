@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap"
 import messages from "../shared/AutoDismissAlert/messages"
 import dateFormat from "dateformat"
 import LoadingScreen from "../shared/LoadingScreen"
+import apiUrl from "../../apiConfig"
 
 const ShowBlog = (props) => {
     const [blog, setBlog] = useState({})
@@ -67,9 +68,9 @@ const ShowBlog = (props) => {
             {blog.blogImage?
                     <div className='text-center mt-4 mb-4 p-1' >
                         {console.log('blog.blogImage', blog.blogImage)}
-                        <img className='border-radius border-radius-5' 
+                        <img className='border-radius border-radius-5n' 
                                 style={{width: '45%'}}
-                                src={`http://localhost:8000/${blog.blogImage}`} 
+                                src={`${apiUrl}/${blog.blogImage}`} 
                                 />
                     </div>
                 :

@@ -7,7 +7,6 @@ import { useState } from 'react'
 const CreateBlog = (props) => {
     const { user, msgAlert, updatedBlogs, setUpdatedBlogs } = props
     const navigate = useNavigate()
-    const [ selected, setSelected ] = useState(null)
     const [blog, setBlog] = useState({
         title: '',
         text: '',
@@ -49,15 +48,10 @@ const CreateBlog = (props) => {
             }
 
         })
-        // setSelected(e.target.files[0])
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // debugger
-        // const data = new FormData()
-        // data.append('upload', fileName)
-        // console.log('data.getAll("upload")', data.getAll('upload'))
         createBlog(user, blog, fileName)
         // setUpdatedBlogs()
             .then(res => { navigate(`/blog/${res.data.blog._id}`)})

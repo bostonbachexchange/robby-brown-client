@@ -14,13 +14,11 @@ export const createBlog = (user, blog, fileName) => {
     console.log('this is blog', blog)
     console.log('this is fileName', fileName)
     const formData = new FormData();
-    // formData.append(blog);
     formData.append('blog', JSON.stringify(blog));
     formData.append('file', fileName);
 
 	return axios({
 		method: 'POST',
-        // checkurl
 		url: apiUrl + '/blogs',
 		headers: {
 			Authorization: `Token token=${user.token}`,

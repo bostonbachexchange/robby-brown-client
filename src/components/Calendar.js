@@ -50,7 +50,15 @@ const Calendar = (props) => {
 
 	const pastEvents = events.filter(event => Date.parse(event.date) < currentDate.getTime());
 
-	const upcomingEventItems = upcomingEvents.map(event => 
+	const sortedEvents = upcomingEvents.sort((a, b) => {
+		const dateA = new Date(a.date);
+		const dateB = new Date(b.date);
+		return dateA - dateB;
+	  });
+	  
+	  
+	const upcomingEventItems = sortedEvents.map(event => 
+		
 		<>
 			<Container 
 				className='mt-3 p-0 rounded' 
@@ -92,6 +100,7 @@ const Calendar = (props) => {
 			</Container>
 		</>
 		)
+// upcomingEventItems.sort({date: 1})
 
 	const eventItems = pastEvents.map(event => 
 		<>
