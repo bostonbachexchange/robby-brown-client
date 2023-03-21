@@ -93,9 +93,10 @@ const Calendar = (props) => {
 				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black', backgroundColor: 'whitesmoke', fontFamily: 'Roboto', fontSize: '18px'}}>
 					<p className='p-1'>{event.details}</p>
 					<p>{event.location}</p>
-					<a href={event.learnmore} target='_blank'>
+					{event.learnmore? <a href={event.learnmore} target='_blank'>
 						<Button >Learn More</Button>
-					</a>
+					</a> : null}
+					
 				</Row>
 			</Container>
 		</>
