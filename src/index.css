@@ -193,6 +193,10 @@ code {
   .stuff {
     font-size: 42px;
   }
+  .upcomingEvents {
+    text-align: center!important;
+    color: rgb(138, 114, 55);
+  }
 }
  
 .HoverClass1:hover {
