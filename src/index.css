@@ -106,7 +106,15 @@ code {
   font-size: 22px;
   padding: 8px;
 }
+.upcomingEvents {
+  margin-left: 5%!important;
+  color: rgb(138, 114, 55);
+}
 @media only screen and (max-width: 600px) {
+  .upcomingEvents {
+    text-align: center!important;
+    color: rgb(138, 114, 55);
+  }
   .mediaPage {
     /* display: block; */
     flex-direction: column;

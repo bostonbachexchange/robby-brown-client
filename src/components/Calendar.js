@@ -38,11 +38,6 @@ const Calendar = (props) => {
 	} else if (events.length === 0) {
 		return <p className='text-center m-4'>No Events yet. Check back soon.</p>
 	}
-	// const noEvents =()=> {
-	// 	return (
-	// 		<p>There are currently no upcoming events. Check back soon</p>
-	// 	)
-	// }
 
 	const currentDate = new Date();
 	
@@ -101,7 +96,6 @@ const Calendar = (props) => {
 			</Container>
 		</>
 		)
-// upcomingEventItems.sort({date: 1})
 
 	const eventItems = pastEvents.map(event => 
 		<>
@@ -152,10 +146,10 @@ const Calendar = (props) => {
 				<div className='p-4' >
 					<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', borderRadius: '4px', backgroundColor: '#FFF'}}>Calendar</h2>
 				</div>
-				<h2 className="m-2 text-center pt-4 pb-4">2023</h2>
-			<h3 className='m-2 mt-4'>Upcoming Events</h3>
+			<h2 className="m-2 text-center pt-4 pb-4">2023</h2>
+			<h3 className='upcomingEvents p-3'>Upcoming Events</h3>
 			{(upcomingEventItems.length > 0 ) ? upcomingEventItems : <p className='m-4'>There are currently no upcoming events. Check back soon!</p>}
-			<h3 className='m-2 mt-4'>Past Events</h3>
+			<h3 className='mt-4 upcomingEvents p-3'>Past Events</h3>
 			{eventItems}
 			</div>
 		</>
