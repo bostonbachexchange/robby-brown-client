@@ -107,7 +107,8 @@ code {
   padding: 8px;
 }
 .upcomingEvents {
-  margin-left: 3%;
+  /* margin-left: 3%; */
+  text-align: center!important;
   color: rgb(138, 114, 55);
 }
 @media only screen and (max-width: 600px) {
