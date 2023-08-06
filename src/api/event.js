@@ -10,8 +10,8 @@ export const getOneBlog = (id) => {
 }
 
 export const createEvent = (user, event) => {
-    console.log('this is user', user)
-    console.log('this is event', event)
+    // console.log('this is user', user)
+    // console.log('this is event', event)
 	return axios({
 		method: 'POST',
         // checkurl
@@ -25,7 +25,7 @@ export const createEvent = (user, event) => {
 
 export const updateEvent = (user, updatedEvent) => {
     // console.log('this is user', user)
-    console.log('this is updatedEvent', updatedEvent)
+    // console.log('this is updatedEvent', updatedEvent)
 	return axios({
 		url: `${apiUrl}/event/${updatedEvent._id}`,
 		method: 'PATCH',
@@ -37,8 +37,8 @@ export const updateEvent = (user, updatedEvent) => {
 }
 
 export const removeEvent = (user, eventId) => {
-    console.log('here is the eventId in delete', eventId)
-    console.log('here is the user in delete', user)
+    // console.log('here is the eventId in delete', eventId)
+    // console.log('here is the user in delete', user)
     return axios({
         // blogId
         url: `${apiUrl}/event/${eventId}`,

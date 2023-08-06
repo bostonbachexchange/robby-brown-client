@@ -54,7 +54,7 @@ const ShowBlog = (props) => {
         <>
             <div  style={{position: "relative"}}>
                 <div style={{position: "absolute", right: 0}}><p className="m-2">{dateFormat(blog.createdAt, "dddd, h:MM TT")}</p></div>
-                <h1 className='m-auto p-2' style={{poistion: 'absolute', textAlign: 'center'}}>{blog.title}</h1>
+                <h1 className='m-auto p-2' style={{poistion: 'absolute', textAlign: 'center'}}>{blog.title} I don't think this is being used</h1>
             </div>
             <div className="text-center m-4">
                 <p>{blog.text}</p>

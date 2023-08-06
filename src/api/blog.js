@@ -10,9 +10,9 @@ export const getOneBlog = (id) => {
 }
 
 export const createBlog = (user, blog, fileName) => {
-    console.log('this is user', user)
-    console.log('this is blog', blog)
-    console.log('this is fileName', fileName)
+    // console.log('this is user', user)
+    // console.log('this is blog', blog)
+    // console.log('this is fileName', fileName)
     const formData = new FormData();
     formData.append('blog', JSON.stringify(blog));
     formData.append('file', fileName);
@@ -28,16 +28,19 @@ export const createBlog = (user, blog, fileName) => {
 	})
 }
 
-export const updateBlog = (user, updatedBlog) => {
-    // console.log('this is user', user)
-    console.log('this is updatedBlog', updatedBlog)
+export const updateBlog = (user, blog, fileName, id) => {
+    console.log('blog id???', blog)
+    const formData = new FormData()
+    formData.append('blog', JSON.stringify(blog));
+    formData.append('file', fileName)
+    console.log('this is formData', formData)
 	return axios({
-		url: `${apiUrl}/blog/${updatedBlog._id}`,
+		url: `${apiUrl}/blogs/${id}`,
 		method: 'PATCH',
 		headers: {
 			Authorization: `Token token=${user.token}`,
 		},
-		data: { blog: updatedBlog},
+		data: formData,
 	})
 }
 

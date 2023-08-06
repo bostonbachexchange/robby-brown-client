@@ -5,7 +5,7 @@ import { createBlogSuccess, createBlogFailure } from '../shared/AutoDismissAlert
 import { useState } from 'react'
 
 const CreateBlog = (props) => {
-    const { user, msgAlert, updatedBlogs, setUpdatedBlogs } = props
+    const { user, msgAlert } = props
     const navigate = useNavigate()
     const [blog, setBlog] = useState({
         title: '',
@@ -18,21 +18,9 @@ const CreateBlog = (props) => {
     const [fileName, setFileName] = useState({})
 
     const onChangeFile = (e) => {
-        console.log('e.target.files[0]', e.target.files[0]) 
         setFileName(e.target.files[0])
-        console.log('e.target.files[0].name', e.target.files[0].name)
-        // setBlog((prevBlog) => ({
-        //     ...prevBlog,
-        //     blogImage: document.getElementById('blogImage').files[0]
-        //     // blogImage: `${e.target.files[0].name}`
-        // }));
+     
     };
-    // const onChangeFile = (e) => {
-    //     setBlog((prevBlog) => ({
-    //       ...prevBlog,
-    //       blogImage: e.target.files[0]
-    //     }));
-    //   };
       
 
     const handleChange = (e) => {
@@ -53,9 +41,7 @@ const CreateBlog = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         createBlog(user, blog, fileName)
-        // setUpdatedBlogs()
             .then(res => { navigate(`/blog/${res.data.blog._id}`)})
-            // .then(res => console.log('this is the blog inside createBlog', blog))
             .then(() => {
                 msgAlert({
                     heading: 'Oh Yeah!',
@@ -71,9 +57,13 @@ const CreateBlog = (props) => {
                 }))
     }
 
-    return <BlogForm blog={blog} handleSubmit={handleSubmit} handleChange={handleChange} 
-    onChangeFile={onChangeFile}
-    />
+    return <BlogForm 
+                blog={blog} 
+                handleSubmit={handleSubmit} 
+                handleChange={handleChange} 
+                onChangeFile={onChangeFile}
+                heading="Create New Blog"
+                />
 }
 
 export default CreateBlog

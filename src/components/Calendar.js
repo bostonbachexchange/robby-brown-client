@@ -11,9 +11,9 @@ import dateFormat, { masks } from "dateformat";
 
 const Calendar = (props) => {
 	// const { msgAlert, user } = props
-	console.log('props in Calendar', props)
+	// console.log('props in Calendar', props)
 	const { updatedEvents } = props
-	console.log('props in Event', props)
+	// console.log('props in Event', props)
 	const [events, setEvents] = useState(null)
 	const [error, setError] = useState(false)
 	const { msgAlert } = props
