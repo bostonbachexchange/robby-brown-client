@@ -82,15 +82,16 @@ const Calendar = (props) => {
 	  
 	  
 	  const upcomingEventItems = sortedEvents.map(event => (
+		<>
 		<Container 
 		  className='mt-3 p-0 rounded' 
 		  style={{
-			width: '100%', 
-			boxShadow: '3px 3px 3px grey', 
-			backgroundColor: '#FFF', // Changed background color
-			border: '3px solid transparent' // Removed border color
-		  }}
-		>
+			  width: '100%', 
+			  boxShadow: '3px 3px 3px grey', 
+			  backgroundColor: '#FFF', // Changed background color
+			  border: '3px solid transparent' // Removed border color
+			}}
+			>
 		  <Row>
 			<Col md={3}></Col>
 			<Col md={6} style={{fontFamily: 'Zichtbaar, Arial, sans-serif'}}>
@@ -104,17 +105,17 @@ const Calendar = (props) => {
 			<Col md={3} style={{borderLeft: '2px solid grey'}}>
 			  <Row className='text-center mt-4 mb-4'>
 				{event.learnmore ? (
-				  <a href={event.learnmore} target='_blank'>
+					<a href={event.learnmore} target='_blank'>
 					<button 
 					  class='seeDetailsButton' 
 					  style={{
-						border: '1px solid transparent', 
-						borderRadius: '3px', 
-						fontFamily: 'Arial', 
-						width: '90%', 
-						padding: '14px'
-					  }}
-					>
+						  border: '1px solid transparent', 
+						  borderRadius: '3px', 
+						  fontFamily: 'Arial', 
+						  width: '90%', 
+						  padding: '14px'
+						}}
+						>
 					  <b>See Details</b>
 					</button>
 				  </a>
@@ -136,6 +137,29 @@ const Calendar = (props) => {
 			</Col>
 		  </Row>
 		</Container>
+		{ user ?
+			<Row className='mb-5'>
+				<Col md={9}></Col>
+				<Col md={3} className='mt-4'>
+					<div className='ml-0 d-inline-block' style={{width: '49%', alignItems: 'left', fontFamily: 'Arial'}}>
+						<Button 
+							onClick={() => {
+								setSelectedEventId(event._id);
+								setEditModalShow(true);
+							}} 
+							className="ml-0" variant="warning" style={{paddingLeft: '20px', paddingRight: '20px', alignItems: 'left'}}>
+								Edit
+						</Button>
+					</div>
+					<div className='d-inline-block' style={{width: '49%', alignItems: 'right', fontFamily: 'Arial', marginRight: '-10px'}}>
+						<Button onClick={() => removeTheEvent(event)} className="mr-0 " variant="danger">
+							Delete
+						</Button>
+					</div>
+				</Col>
+			</Row > 
+			: null }
+		</>
 	  ));
 
 	// const upcomingEventItems = sortedEvents.map(event => 
@@ -273,6 +297,7 @@ const Calendar = (props) => {
 						</Col>
 					</Row > 
 					: null }
+
 				{/* <Row 
 					className='m-auto p-3 rounded-top' 
 					style={{border: '2px solid black', 
