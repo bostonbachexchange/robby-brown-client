@@ -52,6 +52,7 @@ const ShowBlog = (props) => {
                 })
             })
     }
+    
     return (
         <>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>

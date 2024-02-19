@@ -42,8 +42,8 @@ const Blog = (props) => {
 				key={blog._id}>
 				<div 
 				style={{ 
-					backgroundColor: '#d4cebe', 
-					color: '#AD974F', 
+					backgroundColor: 'lightgrey', 
+					color: 'black', 
 					borderTopRightRadius: '10px', 
 					borderTopLeftRadius: '10px',
 					marginTop: '0px'}}>
@@ -57,10 +57,11 @@ const Blog = (props) => {
 						<p><small>{dateFormat(blog.date, "m-d-yy")}</small></p>
 					</div> 
            		</div>
-				<p className='text-center pt-2 pb-5 mb-0 mt-0 fs-5' style={{fontFamily: 'Rajdhani', fontSize: '20px', backgroundColor: 'whitesmoke', borderRadius: '11px', color: '#212121'}}>{blog.text.slice(0, 150) } ... </p>
+				<p className='text-center pt-2 pb-5 mb-0 mt-0 fs-5' style={{fontFamily: 'Rajdhani', fontSize: '20px', backgroundColor: 'whitesmoke', borderRadius: '11px', color: 'black'}}>{blog.text.slice(0, 150) } ... </p>
 				<div className='text-center blogReadMore'>
-					<Button className="p-3 text-center rounded-pill conRdgBorder" style={{ border: '3px solid #212121', backgroundColor: '#AD974F'}} >
-						<Link to={`/blog/${blog._id}`} style={{color: 'black', textDecorationLine: 'none', fontWeight: 'bold'}}><span className='cndRdg'>Continue Reading</span></Link>
+					<Button className="p-3 text-center rounded-pill conRdgBorder" style={{ border: '3px solid #194b77', backgroundColor: '#194b77'}} >
+					{/* <Button className="p-3 text-center rounded-pill conRdgBorder" style={{ border: '3px solid #212121', backgroundColor: '#AD974F'}} > */}
+						<Link to={`/blog/${blog._id}`} style={{color: 'whitesmoke', textDecorationLine: 'none', fontWeight: 'bold'}}><span className='cndRdg'>Continue Reading</span></Link>
 					</Button>
 				</div>
 			</div>

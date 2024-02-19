@@ -2,7 +2,7 @@ import eliaspic from '../assets/images/elias-pic.jpeg'
 const Home = () => {
 	return (
 		<>
-			<div style={{backgroundColor: '#EEE', minHeight: '100vh'}}>
+			<div style={{backgroundColor: 'rgb(238, 238, 238)', minHeight: '100vh'}}>
 				<div className='p-3'>
 					<h2 className="m-auto text-center border-top border-bottom" style={{width: '200px', boxShadow: '1px 1px 1px black', borderRadius: '4px', backgroundColor: '#FFF'}}>Biography</h2>
 				</div>
@@ -18,11 +18,6 @@ const Home = () => {
 						<br></br>Elias holds degrees from Columbia University (where he participated in the Exchange Program with Juilliard) and New England Conservatory. Some of his most influential teachers have included Eugene Kaminsky, Jeffrey Goldberg, Julian Martin, Jerome Lowenthal, Alexander Korsantia, Vivian Weilerstein, and Cameron Stowe. 
 						<br></br>
 						<br></br>Elias also plays the mbira dzavadzimu, a plucked instrument of metal keys wound over a wooden soundboard. The instrument comes from the Shona people of Zimbabwe.  
-						{/* <br></br>
-						<br></br>He spent the summer of 2022 at the Tanglewood Music Center, where he met and collaborated with several inspiring colleagues. Some highlights of the summer included performing Julius Eastman's Gay Guerilla for four pianos and playing the preparatory piano rehearsals for George Benjamin's opera Lessons in Love and Violence, several of which were led by the composer himself. Some of Elias's most influential piano teachers have included Eugene Kaminsky, Jeffrey Goldberg, Jerome Lowenthal, Julian Martin, Alexander Korsantia, Vivian Weilerstein, and Cameron Stowe. 
-						<br></br>
-						<br></br>
-						Elias also plays the mbira dzavadzimu, a plucked instrument of metal keys wound over a wooden soundboard. The instrument comes from the Shona people of Zimbabwe, and can be played both as a solo instrument and in ensembles of various sizes. He often plays, and occasionally performs, alongside a Boston-based group of practitioners of this traditional Zimbabwean music.  */}
 						</p>
 					</div>
 				</div>

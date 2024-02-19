@@ -9,9 +9,10 @@ export const getOneBlog = (id) => {
     return axios(`${apiUrl}/event/${id}`)
 }
 
-export const createEvent = (user, event) => {
-    // console.log('this is user', user)
-    // console.log('this is event', event)
+export const createEvent = (user, event, fileName) => {
+    const formData = new FormData();
+    formData.append('event', JSON.stringify(event));
+    formData.append('file', fileName);
 	return axios({
 		method: 'POST',
         // checkurl
@@ -19,20 +20,21 @@ export const createEvent = (user, event) => {
 		headers: {
 			Authorization: `Token token=${user.token}`,
 		},
-		data: { event: event},
+		data: formData,
 	})
 }
 
-export const updateEvent = (user, updatedEvent) => {
-    // console.log('this is user', user)
-    // console.log('this is updatedEvent', updatedEvent)
+export const updateEvent = (user, event, fileName) => {
+    const formData = new FormData()
+    formData.append('event', JSON.stringify(event));
+    formData.append('file', fileName)
 	return axios({
-		url: `${apiUrl}/event/${updatedEvent._id}`,
+		url: `${apiUrl}/event/${event.id}`,
 		method: 'PATCH',
 		headers: {
 			Authorization: `Token token=${user.token}`,
 		},
-		data: { event: updatedEvent},
+		data: formData,
 	})
 }
 

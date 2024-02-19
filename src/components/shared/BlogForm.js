@@ -42,7 +42,7 @@ const BlogForm = (props) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label htmlFor="blogImage">Image</Form.Label>
+                    <Form.Label htmlFor="fileName">Image</Form.Label>
                     <Form.Control 
                         type='file'
                         // multiple 

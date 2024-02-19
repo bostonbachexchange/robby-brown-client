@@ -17,7 +17,13 @@ const CreateEvent = (props) => {
         date: '',
         time:'',
     })
-    console.log('this is event in createEvent', event)
+    const [fileName, setFileName] = useState({})
+
+    const onChangeFile = (e) => {
+        setFileName(e.target.files[0])
+     
+    };
+
     const handleChange = (e) => {
         setEvent(prevEvent => {
             const updatedValue = e.target.value 
@@ -35,9 +41,9 @@ const CreateEvent = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        createEvent(user, event)
+        createEvent(user, event, fileName)
             .then(res => { navigate(`/calendar`)})
-            .then(res => console.log('this is the event inside createEvent', event))
+            // .then(res => console.log('this is the event inside createEvent', event))
             .then(() => {
                 msgAlert({
                     heading: 'Oh Yeah!',
@@ -53,7 +59,13 @@ const CreateEvent = (props) => {
                 }))
     }
 
-    return <EventForm event={event} handleSubmit={handleSubmit} handleChange={handleChange} />
+    return <EventForm 
+                event={event} 
+                handleSubmit={handleSubmit} 
+                handleChange={handleChange} 
+                onChangeFile={onChangeFile} 
+                heading="Create a New Calendar Event"
+                />
 }
 
 export default CreateEvent
