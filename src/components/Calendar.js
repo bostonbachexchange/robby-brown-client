@@ -81,61 +81,118 @@ const Calendar = (props) => {
 	  });
 	  
 	  
-	const upcomingEventItems = sortedEvents.map(event => 
+	  const upcomingEventItems = sortedEvents.map(event => (
+		<Container 
+		  className='mt-3 p-0 rounded' 
+		  style={{
+			width: '100%', 
+			boxShadow: '3px 3px 3px grey', 
+			backgroundColor: '#FFF', // Changed background color
+			border: '3px solid transparent' // Removed border color
+		  }}
+		>
+		  <Row>
+			<Col md={3}></Col>
+			<Col md={6} style={{fontFamily: 'Zichtbaar, Arial, sans-serif'}}>
+			  <Row className='p-4 m-2'>
+				<h3>{event.title}</h3>
+			  </Row>
+			  <Row className='p-4 m-2'> 
+				<p>{event.details}</p>
+			  </Row>
+			</Col>
+			<Col md={3} style={{borderLeft: '2px solid grey'}}>
+			  <Row className='text-center mt-4 mb-4'>
+				{event.learnmore ? (
+				  <a href={event.learnmore} target='_blank'>
+					<button 
+					  class='seeDetailsButton' 
+					  style={{
+						border: '1px solid transparent', 
+						borderRadius: '3px', 
+						fontFamily: 'Arial', 
+						width: '90%', 
+						padding: '14px'
+					  }}
+					>
+					  <b>See Details</b>
+					</button>
+				  </a>
+				) : null}
+			  </Row>
+			  <Row style={{width: '90%', marginBottom: '28px'}}>
+				<Card.Text className='p-4' style={{color: 'grey', fontSize: '14px'}}>
+				  <FontAwesomeIcon icon={faClockFour} className='mr-2' size='md' color='grey' />
+				  <span className='m-2 wd-100'>
+					{dateFormat(event.date.replace(/-/g, '/').replace(/T.+/, ''), 'ddd mmm dd, yyyy ')} - {event.time}
+				  </span>
+				</Card.Text>
+				<hr style={{width: '100%', color: 'black', fontSize: '5px', margin: '0% 0% 0% 7.5%', padding: '0px'}}></hr>
+				<Card.Text className='p-4' style={{color: 'grey', fontSize: '14px'}}>
+				  <FontAwesomeIcon icon={faLocationPin} className='mr-2' size='md' color='grey' />
+				  <span className='m-2 wd-100'>{event.location}</span>
+				</Card.Text>
+			  </Row>
+			</Col>
+		  </Row>
+		</Container>
+	  ));
+
+	// const upcomingEventItems = sortedEvents.map(event => 
 		
-		<>
-			<Container 
-				className='mt-3 p-0 rounded' 
-				style={{
-					width: '100%', 
-					boxShadow: '3px 3px 3px grey', 
-					border: '3px solid wheat'}}>
-				<Row 
-					className='m-auto p-3 rounded-top' 
-					style={{border: '2px solid black', 
-					backgroundColor: '#212121', 
-					color: 'wheat'}}>
-					<Col 
-						md={3} 
-						className="text-start" 
-						style={{fontSize: '1.5em'}}>
-							{dateFormat(event.date.replace(/-/g, '\/').replace(/T.+/, ''), "mm-d-yy")}
-					</Col>
-					<Col 
-						md={6} 
-						className="text-center" 
-						style={{fontSize: '1.4em', 
-						fontWeight: 'bold'}}>
-							{event.title}
-					</Col>
-					<Col 
-						sm={3} 
-						className="text-end">
-							{event.time}
-					</Col>
-				</Row>
-				<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black', backgroundColor: 'whitesmoke', fontFamily: 'Roboto', fontSize: '18px'}}>
-					<p className='p-1'>{event.details}</p>
-					<p>{event.location}</p>
-					{event.learnmore? <a href={event.learnmore} target='_blank'>
-						<button className='seeDetailsButton'>See Details</button>
-					</a> : null}
-				</Row>
-				{/* <Row>
-					<Col md={9}>;lija;dsf</Col>
-					<Col md={3}>
-						<Button onClick={() => setEditModalShow(true)} className="m-2" variant="warning">
-                       		Edit
-                        </Button>
-                        <Button onClick={() => removeTheEvent()} className="m-2" variant="danger">
-                            Delete
-                        </Button>
-					</Col>
-				</Row> */}
+	// 	<>
+	// 		<Container 
+	// 			className='mt-3 p-0 rounded' 
+	// 			style={{
+	// 				width: '100%', 
+	// 				boxShadow: '3px 3px 3px grey', 
+	// 				border: '3px solid wheat'}}>
+	// 			<Row 
+	// 				className='m-auto p-3 rounded-top' 
+	// 				style={{border: '2px solid black', 
+	// 				backgroundColor: '#212121', 
+	// 				color: 'wheat'}}>
+	// 				<Col 
+	// 					md={3} 
+	// 					className="text-start" 
+	// 					style={{fontSize: '1.5em'}}>
+	// 						{dateFormat(event.date.replace(/-/g, '\/').replace(/T.+/, ''), "mm-d-yy")}
+	// 				</Col>
+	// 				<Col 
+	// 					md={6} 
+	// 					className="text-center" 
+	// 					style={{fontSize: '1.4em', 
+	// 					fontWeight: 'bold'}}>
+	// 						{event.title}
+	// 				</Col>
+	// 				<Col 
+	// 					sm={3} 
+	// 					className="text-end">
+	// 						{event.time}
+	// 				</Col>
+	// 			</Row>
+	// 			<Row className='m-auto  p-2 text-center rounded-bottom' style={{borderLeft: '2px solid black', borderRight: '2px solid black', borderBottom: '2px solid black', backgroundColor: 'whitesmoke', fontFamily: 'Roboto', fontSize: '18px'}}>
+	// 				<p className='p-1'>{event.details}</p>
+	// 				<p>{event.location}</p>
+	// 				{event.learnmore? <a href={event.learnmore} target='_blank'>
+	// 					<button className='seeDetailsButton'>See Details</button>
+	// 				</a> : null}
+	// 			</Row>
+	// 			{/* <Row>
+	// 				<Col md={9}>;lija;dsf</Col>
+	// 				<Col md={3}>
+	// 					<Button onClick={() => setEditModalShow(true)} className="m-2" variant="warning">
+    //                    		Edit
+    //                     </Button>
+    //                     <Button onClick={() => removeTheEvent()} className="m-2" variant="danger">
+    //                         Delete
+    //                     </Button>
+	// 				</Col>
+	// 			</Row> */}
 				
-			</Container>
-		</>
-		)
+	// 		</Container>
+	// 	</>
+	// 	)
 
 	const eventItems = pastEvents.map(event => {
 
