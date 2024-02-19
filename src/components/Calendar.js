@@ -81,10 +81,16 @@ const Calendar = (props) => {
 	  });
 	  
 	  
-	  const upcomingEventItems = sortedEvents.map(event => (
+	  const upcomingEventItems = sortedEvents.map((event, index) => {
+
+		const eventPictureSrc =
+        	event.image === 'default'? null
+        		: `${apiUrl}/${event.image}`;
+		return(
 		<>
 		<Container 
-		  className='mt-3 p-0 rounded' 
+		  className='mt-3 p-0 rounded'
+		  key= {index }
 		  style={{
 			  width: '100%', 
 			  boxShadow: '3px 3px 3px grey', 
@@ -93,7 +99,13 @@ const Calendar = (props) => {
 			}}
 			>
 		  <Row>
-			<Col md={3}></Col>
+		  <Col md={3}>
+						{event.image? 
+							<img className='eventPhoto d-block img-fluid' fluid src={eventPictureSrc}/>
+							: null
+						}
+		
+					</Col>
 			<Col md={6} style={{fontFamily: 'Zichtbaar, Arial, sans-serif'}}>
 			  <Row className='p-4 m-2'>
 				<h3>{event.title}</h3>
@@ -160,8 +172,8 @@ const Calendar = (props) => {
 			</Row > 
 			: null }
 		</>
-	  ));
-
+		)
+						});
 	// const upcomingEventItems = sortedEvents.map(event => 
 		
 	// 	<>
@@ -218,7 +230,7 @@ const Calendar = (props) => {
 	// 	</>
 	// 	)
 
-	const eventItems = pastEvents.map(event => {
+	const eventItems = pastEvents.map((event, index) => {
 
 		const eventPictureSrc =
         	event.image === 'default'? null
@@ -228,6 +240,7 @@ const Calendar = (props) => {
 		<>
 			<Container 
 				className='mt-3 p-0 rounded' 
+				key= {index }
 				style={{
 					width: '100%', 
 					boxShadow: '3px 3px 3px grey', 
