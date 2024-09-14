@@ -1,4 +1,4 @@
-import eliaspic from '../assets/images/elias-pic.jpeg'
+// import eliaspic from '../assets/images/elias-pic.jpeg'
 const Home = () => {
 	return (
 		<>
@@ -8,7 +8,7 @@ const Home = () => {
 				</div>
 				<div class='bioPage'>
 					<div style={{flex: '6'}} className='text-center'>
-						<img className='mt-5' src={eliaspic} style={{width: '95%', border: '2px solid black', borderRadius: '10px'}}></img>
+						{/* <img className='mt-5' src={eliaspic} style={{width: '95%', border: '2px solid black', borderRadius: '10px'}}></img> */}
 					</div>
 					<div style={{flex: '6'}}>
 						<p className="mt-4 pb-4 stuff mb-0">Pianist Elias Dagher values music's power to tell stories and build community. He lives in Quincy, MA. Last spring, Elias completed a two year fellowship at Bard College, where he worked daily with both vocalists and instrumentalists in his role as a collaborative pianist. The program is headed by pianists and vocal coaches Erika Switzer and Kayo Iwama, whose deep love of art song will leave a lasting impression on Elias. 
