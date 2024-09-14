@@ -85,7 +85,7 @@ const alwaysOptions = (
 				<>
 					<Navbar.Brand className='m-auto'>
 						<Link to='/' style={brandStyle}>
-							Elias Dagher</Link>
+							Robby Brown</Link>
 					</Navbar.Brand>
 				</>
 				<>
