@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/robby-brown-client/static/css/main.4b0fcc62.chunk.css",
+    "main.js": "/robby-brown-client/static/js/main.a253495c.chunk.js",
+    "main.js.map": "/robby-brown-client/static/js/main.a253495c.chunk.js.map",
+    "runtime-main.js": "/robby-brown-client/static/js/runtime-main.8fbc7991.js",
+    "runtime-main.js.map": "/robby-brown-client/static/js/runtime-main.8fbc7991.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/robby-brown-client/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.28424174.chunk.js": "/robby-brown-client/static/js/2.28424174.chunk.js",
+    "static/js/2.28424174.chunk.js.map": "/robby-brown-client/static/js/2.28424174.chunk.js.map",
+    "index.html": "/robby-brown-client/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/robby-brown-client/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.4b0fcc62.chunk.css.map": "/robby-brown-client/static/css/main.4b0fcc62.chunk.css.map",
+    "static/js/2.28424174.chunk.js.LICENSE.txt": "/robby-brown-client/static/js/2.28424174.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fbc7991.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.28424174.chunk.js",
+    "static/css/main.4b0fcc62.chunk.css",
+    "static/js/main.a253495c.chunk.js"
+  ]
+}
