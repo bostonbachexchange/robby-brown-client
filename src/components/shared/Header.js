@@ -123,7 +123,7 @@ const Header = ({ user }) => (
 				{/* <a href="/" target="_blank">
 					<FontAwesomeIcon icon={faYoutube} className='m-1 border border-4 shadow rounded' size="lg" color="darkred" />
 				</a> */}
-				<a href="mailto:eid2107@columbia.edu" target="_blank">
+				<a href="mailto:robbybrown7@gmail.com" target="_blank">
 					<FontAwesomeIcon icon={faEnvelope} className='m-1 border border-4 shadow rounded' size="lg" color="darkblue" />
 				</a>
 			</Navbar>
