@@ -10,11 +10,11 @@ const Media = () => {
 
 				<div className='mediaPage' >
 					<div className='mt-auto mb-auto' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/EwGbCQMd-S4" allowFullScreen></iframe>
+						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/EIoQtrMeA_o" allowFullScreen></iframe>
 					</div>
 					<div className='discriptionWeb'>
-						<h3>Mahler - “Rheinlegendchen” | NEC Liederabend Series</h3>
-						<p className="m-3 fs-5">Soprano <a href='https://www.emilysiar.com/home'>Emily Siar</a> and pianist Elias Dagher perform “Rheinlegendchen” (Little Rhine Legend) from Mahler’s Des Knaben Wunderhorn, a collection of his charming settings of German folk poems. 
+						<h3>Piazzolla: Café 1930</h3>
+						<p className="m-3 fs-5">Violinist June Lee and guitarist Robby Brown play Astor Piazzolla's Café 1930, the middle movement of the Argentinian composer's "Histoire du Tango."  Captured in concert at a Heifetz Institute "Stars of Tomorrow" concert at Mary Baldwin University's Francis Auditorium in Staunton, VA.  
 						<br></br><br></br>
 						</p>
 					</div>
@@ -22,34 +22,36 @@ const Media = () => {
 
 				<div className='mediaPage mediaReverse' >
 					<div className='discriptionWeb'>
-						<h3>Janacek Violin Sonata</h3>
-						<p className="m-3 fs-5">Violinist <a href='https://www.david-bernat.com/'>David Bernat</a> and pianist Elias Dagher perform at Burnes Hall in New England Conservatory, May 2018. Recording by Simon Yue.
+						<h3>Antonín Dvořák: Silent Woods</h3>
+						<p className="m-3 fs-5">Violist Andrew Gonzalez and guitar Robby Brown, perform a stunning viola--and-guitar arrangement of Antonin Dvorak's "Silent Woods" at the debut Heifetz Institute concert of 2019 at the American Shakespeare Center's Blackfriars Playhouse in Staunton, VA.  The arrangement is by guitarist Julia Egan,  commissioned by the Heifetz Institute. 
 						</p>
 					</div>
 					<div className='text-center' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/JRrzXDe-6ZY" allowFullScreen></iframe>
+						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/gz0Iw2CTWQQ" allowFullScreen></iframe>
 					</div>
 				</div>
 				<div className='mediaPage' >
 					<div className='text-center mt-auto mb-auto' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/E6zfq5DOCUM" allowFullScreen></iframe>
+						<iframe className='rounded videoWebStyle' src="https://www.youtube.com/embed/wSmmROwGxoo" allowFullScreen></iframe>
 					</div>
 					<div className='discriptionWeb' >
-						<h3 >VAP Degree Recital <br></br> <a href="https://www.paulinetanmezzo.com/">Pauline Tan</a></h3>
-						<p className="m-3 fs-5" >Bard College Conservatory Graduate Vocal Arts Program. Degree Recital on May 21, 2021 at László Z. Bitó, '60 Conservatory Building. 
+						<h3 >Jonas Tarm: Thoughts of Prayer</h3>
+						<p className="m-3 fs-5" >Robby Brown performs Jonas Tarm's "Thoughts of Prayer." Both Brown and Tarm are students at New England Conservatory in Boston. This performance was recorded live in Jordan Hall April 19, 2016.Robby Brown performs Jonas Tarm's "Thoughts of Prayer." Both Brown and Tarm are students at New England Conservatory in Boston. This performance was recorded live in Jordan Hall April 19, 2016. 
 						</p>
 					</div>
 				</div>
+
 				<div className='mediaPage mediaReverse' >
 					<div className='discriptionWeb'>
-						<h3>Bach Sonata for Violin and Keyboard in E Major, BWV 1016</h3>
-						<p className="m-3 fs-5">Violinist <a href='https://www.yiliangjiang.net/bio'>Yiliang Jiang</a> and pianist Elias Dagher. November 14, 2019.
+						<h3>Robert Beaser - Cindy (Mountain songs)</h3>
+						<p className="m-3 fs-5">Violinist Onyou Kim and guitarist Robby Brown.
 						</p>
 					</div>
 					<div className='text-center' style={{flex: '6'}}>
-						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/xARcVe-sqPc" allowFullScreen></iframe>
+						<iframe className='rounded videoWebStyle'  src="https://www.youtube.com/embed/EvoakKMK9NA" allowFullScreen></iframe>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
