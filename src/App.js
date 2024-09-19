@@ -53,8 +53,8 @@ const App = () => {
 				<Routes>
 					<Route path='/robby-brown-client/' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route path='/robby-brown-client/media' element={<Media msgAlert={msgAlert} user={user} />} />
-					<Route path='/robby-brown-client/calendar' element={<Calendar msgAlert={msgAlert} user={user} updatedEvents={updatedEvents}/>} />
-					<Route path='/robby-brown-client/blog' element={<Blog msgAlert={msgAlert} user={user} updatedBlogs={updatedBlogs}/>} />
+					<Route path='/calendar' element={<Calendar msgAlert={msgAlert} user={user} updatedEvents={updatedEvents}/>} />
+					<Route path='/blog' element={<Blog msgAlert={msgAlert} user={user} updatedBlogs={updatedBlogs}/>} />
 					<Route
 						path='/login'
 						element={<SignIn msgAlert={msgAlert} setUser={setUser} />}

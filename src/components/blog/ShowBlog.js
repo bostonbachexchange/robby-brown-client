@@ -57,7 +57,7 @@ const ShowBlog = (props) => {
         <>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div className="text-center" style={{flex: 2, color: 'lightcoral'}}>
-                    <p className="p-2">Author: Elias Dagher</p>
+                    <p className="p-2">Author: Robby Brown</p>
                 </div>
                 <div style={{flex: 10, color: '#a17f1a'}}>
                     <h1 className='m-auto p-3 border-bottom fs-1' style={{textAlign: 'center', width: '100%', fontFamily: 'Lobster'}}>
