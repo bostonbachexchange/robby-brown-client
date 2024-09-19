@@ -27,8 +27,9 @@ const Blog = (props) => {
 	}, [updatedBlogs])
 	
 	if (error) {
-		return <p>Error!</p>
+		return <p>{error}!</p>
 	}
+
 	if (!blogs) {
 		return <LoadingScreen />
 	} else if (blogs.length === 0) {
