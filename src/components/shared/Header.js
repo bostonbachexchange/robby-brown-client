@@ -70,21 +70,21 @@ const alwaysOptions = (
 		<Fragment>
 				<>
 					<Nav.Item className='m-auto'>
-						<Link to='/' style={linkStyle}>
+						<Link to='/robby-brown-client/' style={linkStyle}>
 						<span className='HoverClass1'>Home</span>
 						</Link>
 					</Nav.Item>
 				</>
 				<>
 					<Nav.Item className='m-auto'>
-						<Link to='/media' style={linkStyle}>
+						<Link to='/robby-brown-client/media' style={linkStyle}>
 						<span className='HoverClass1'>Media</span>
 						</Link>
 					</Nav.Item>
 				</>
 				<>
 					<Navbar.Brand className='m-auto'>
-						<Link to='/' style={brandStyle}>
+						<Link to='/robby-brown-client/' style={brandStyle}>
 							Robby Brown</Link>
 					</Navbar.Brand>
 				</>
