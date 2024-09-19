@@ -56,7 +56,7 @@ const App = () => {
 					<Route path='/calendar' element={<Calendar msgAlert={msgAlert} user={user} updatedEvents={updatedEvents}/>} />
 					<Route path='/blog' element={<Blog msgAlert={msgAlert} user={user} updatedBlogs={updatedBlogs}/>} />
 					<Route
-						path='/login'
+						path='/robby-brown-client/login'
 						element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
 					/>
 					<Route
